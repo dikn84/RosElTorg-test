@@ -25,8 +25,8 @@ public class FirstTest extends WebDriverSettings {
         driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/a[2]/i/img")).click();
         driver.findElement(By.xpath("//html/body/div[1]/div[3]/div[2]/div/div/div/div[2]/a")).click();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[2]/div/div[2]/div[2]/div/div/div/div/div/table/tbody/tr/td/table/tbody/tr/td[2]/em/button")));
-        wait.until(ExpectedConditions.urlContains("https://etp.roseltorg.ru/authentication/register"));
-        Assert.assertEquals(ExpectedConditions.urlContains("https://etp.roseltorg.ru/authentication/register"), driver.getCurrentUrl());
+        wait.until(ExpectedConditions.urlToBe("https://etp.roseltorg.ru/authentication/register"));
+        Assert.assertEquals(ExpectedConditions.urlToBe("https://etp.roseltorg.ru/authentication/register"), driver.getCurrentUrl());
 
     }
 
